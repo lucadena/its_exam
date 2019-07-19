@@ -13,7 +13,7 @@ export class ConveyorComponent implements OnInit {
   conveyorId = null;
   status = null;
   socket = null;
-  private sectionId: any;
+  sectionId: any;
 
 
   constructor(private route: ActivatedRoute, private API: ApiService,  private socketService: SocketService) {
