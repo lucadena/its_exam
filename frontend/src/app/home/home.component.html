@@ -1,0 +1,31 @@
+<h1>Sections:</h1>
+
+<div *ngFor="let section of sections">
+  <div fxLayout="row">
+    <div style="margin: 5px">
+      <strong>ID: </strong>
+      <a [routerLink]="['/section', section.id]">
+        {{section.id}}
+      </a>
+    </div>
+
+    <div style="margin: 5px">
+      <strong>Name: </strong>
+      <span>
+      {{section.name}}
+    </span>
+    </div>
+
+    <div style="margin: 5px">
+      <strong>Info: </strong>
+      <span>
+      {{section.info}}
+    </span>
+    </div>
+  </div>
+  <hr>
+</div>
+
+
+
+

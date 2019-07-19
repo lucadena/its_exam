@@ -1,0 +1,27 @@
+
+
+<a *ngIf="sectionId" [routerLink]="['/section', sectionId]"> Section - {{sectionId}}</a>
+<a *ngIf="!sectionId" [routerLink]="['/home']"> Home </a>
+
+<h1>Conveyor State</h1>
+
+<div *ngIf="status">
+  <h2>Speed</h2>
+  <div><strong>Value: </strong>
+    <span *ngIf="status.speed>50" style="background-color: red">{{status.speed}} m/min    |||   ERROR</span>
+    <span *ngIf="status.speed<51">{{status.speed}} m/min</span>
+
+  </div>
+  <div><strong>Date: </strong>  <span>{{status.speed_date}}</span></div>
+  <hr>
+
+  <h2>Consumption</h2>
+
+  <div><strong>Value: </strong>
+    <span *ngIf="status.consumption>40" style="background-color: red">{{status.consumption}} watt    |||   ERROR</span>
+    <span *ngIf="status.consumption<41">{{status.consumption}} watt</span>
+
+  </div>
+  <div><strong>Date: </strong>  <span>{{status.consumption_date}}</span></div>
+  <hr>
+</div>

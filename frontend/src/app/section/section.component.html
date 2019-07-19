@@ -1,0 +1,15 @@
+<a [routerLink]="'/home'"> Home</a>
+
+
+<h1>Conveyors</h1>
+
+<div *ngFor="let conveyor of conveyors">
+
+  <span style="margin: 2px">Id: <a  [routerLink]="['/conveyor', conveyor.id, sectionId]" >
+    {{conveyor.id}}
+  </a></span>
+
+  <span style="margin: 2px">Name: {{conveyor.name}}</span>
+  <span style="margin: 2px">Info: {{conveyor.info}}</span>
+  <hr>
+</div>

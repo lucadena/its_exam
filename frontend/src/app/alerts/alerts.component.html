@@ -1,0 +1,27 @@
+
+<h1>Alerts <span style="background-color: red">*</span></h1>
+
+<div *ngFor="let alert of alerts" fxLayout="column">
+  <div fxLayout="row">
+    <strong>Conveyors Id : </strong>
+    <span>
+      <a href = "{{ '/conveyor/' + alert.conveyors_id}}" >
+        {{alert.conveyors_id}}
+      </a>
+    </span>
+  </div>
+  <div fxLayout="row">
+    <strong>Id : </strong><span>{{alert.id}}</span>
+  </div>
+  <div fxLayout="row">
+    <strong>Date : </strong><span>{{alert.timestamp}}</span>
+  </div>
+  <div fxLayout="row">
+    <strong>Type : </strong><span>{{alert.type}}</span>
+  </div>
+  <div fxLayout="row">
+    <strong>Message : </strong><span>{{alert.message}}</span>
+  </div>
+  <button (click)="readAlert(alert.id)">Check!</button>
+  <hr>
+</div>
