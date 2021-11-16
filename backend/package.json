@@ -9,7 +9,7 @@
   "author": "De Nadai Luca",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.493.0",
+    "aws-sdk": "^2.814.0",
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
